@@ -1,0 +1,192 @@
+:root {
+    --contentcolor: #FFFDED;
+    --bgcolor: #FFF8D3;
+    --blockcolor: #A0CED9;
+    --black: #837569;
+    --accent_black: #443d36;
+    --gray: #B5A69A;
+    --strong: #FF7676;
+    --fontsize: 20px;
+}
+
+.forPC {
+    display: block;
+}
+
+.forSP {
+    display: none;
+}
+
+@media only screen and (max-width:767px) {
+    :root {
+        --fontsize: 12px;
+    }
+
+    .forPC {
+        display: none;
+    }
+
+    .forSP {
+        display: block;
+    }
+}
+
+h1 {
+    position: relative;
+    padding: 1.5rem;
+    text-align: center;
+    border: 2px solid var(--black);
+    background: var(--contentcolor);
+}
+
+h1:before,
+h1:after {
+    position: absolute;
+    content: '';
+}
+
+h1:before {
+    top: -40px;
+    left: calc(50% - 40px);
+    width: 80px;
+    height: 80px;
+    border: 2px solid var(--black);
+    border-radius: 50%;
+    background: var(--contentcolor);
+}
+
+h1:after {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--contentcolor);
+}
+
+h1 i {
+    font-size: 48px;
+    font-size: 3rem;
+    line-height: 60px;
+    position: absolute;
+    z-index: 1;
+    top: -40px;
+    left: calc(50% - 38px);
+    width: 80px;
+    height: 60px;
+    text-align: center;
+}
+
+h1 span {
+    position: relative;
+    z-index: 1;
+}
+
+h2 {
+    position: relative;
+    overflow: hidden;
+    padding: 1.5rem 2rem 1.5rem 80px;
+    border: 3px solid var(--black);
+    border-radius: 100vh;
+}
+
+h2 span {
+    font-size: 30px;
+    font-size: 3rem;
+    line-height: 50px;
+    position: absolute;
+    top: calc(50% - 25px);
+    left: 10px;
+    display: block;
+    width: 50px;
+    height: 50px;
+    color: var(--contentcolor);
+    border-radius: 50%;
+    background: var(--black);
+}
+
+h3 {
+    position: relative;
+    padding: 0.25em 0 0 1.2em;
+    line-height: 1.4;
+}
+
+h3:before {
+    font-family: "Font Awesome 5 Free";
+    content: "✦";
+    font-weight: 900;
+    position: absolute;
+    font-size: 1.2em;
+    left: 0;
+    top: 1;
+    color: var(--blockcolor);
+    font-weight: 900;
+}
+
+h3:after {
+    content: "";
+    display: block;
+    height: 4px;
+    background: -webkit-linear-gradient(to right, var(--blockcolor), transparent);
+    background: linear-gradient(to right, var(--blockcolor), transparent);
+}
+
+strong {
+    color: var(--strong);
+}
+
+blockquote {
+    position: relative;
+    padding: 10px 12px;
+    box-sizing: border-box;
+    font-style: italic;
+    color: var(--gray);
+    border: solid 3px var(--blockcolor);
+    border-left-width: 50px;
+}
+
+blockquote:before {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: -55px;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    content: "!";
+    font-family: sans-serif;
+    color: var(--contentcolor);
+    font-size: 90px;
+    line-height: 1;
+}
+
+blockquote p {
+    position: relative;
+    padding: 0;
+    margin: 10px 0;
+    z-index: 3;
+    line-height: 1.7;
+}
+
+blockquote cite {
+    display: block;
+    text-align: right;
+    color: #888888;
+    font-size: 0.9em;
+}
+
+.material-symbols-outlined {
+    font-size: 48px;
+}
+
+body {
+    background-color: var(--bgcolor);
+    color: var(--black);
+    font-size: var(--fontsize);
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.contents {
+    margin: calc(var(--fontsize)*2.5);
+    padding: var(--fontsize);
+    background-color: var(--contentcolor);
+}

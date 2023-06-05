@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="index.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="forPC">
+        <div class="contents">
+            <h1><i class="material-symbols-outlined">menu_book</i><span>HOUSE RULE</span></h1>
+            <h2><span class="material-symbols-outlined">person</span>キャラシ作成</h2>
+            技能値の上限は<strong>どれか一つの技能のみ99%、その他の技能は90%</strong>まで取得可能<br>
+            例外として<strong>回避は80%までのみ</strong>取得可能<br>
+            外国語(英語)技能の代わりにEDU×2でロールを行ってもよい(初期値は1であることに注意)<br>
+            EDUが20以上の場合、〈知識〉は99%とする<br>
+            オリジナル技能として性能が他の技能と同じ技能は自由に追加してよい、それ以外はKPに要相談<br>
+            &emsp;例えば〈チョップ〉初期値50%ダメージ1d3+dbのような技能を取得したい場合、性能が〈こぶし〉と全く同じなため自由に追加してよい<br>
+            <h2><span class="material-symbols-outlined">strategy</span>判定ルール</h2>
+            クリティカルは01~05、ファンブルは96~100、スペシャルは目標値/5とする<br>
+            SAN値チェックにクリティカル/ファンブルは適用しない<br>
+            応急手当でスペシャルの場合、回復値を<strong>1d2+1</strong>とする<br>
+            応急手当でクリティカルの場合、回復値を<strong>1d2+2</strong>とする<br>
+            応急手当セットを所持している場合、さらに回復値を+1する<br>
+            <h2><span class="material-symbols-outlined">skull</span>発狂ルール</h2>
+            一時的狂気の内容は短期の一時的狂気表を用いる<br>
+            期間は戦闘時には1d10+4ラウンド、非戦闘時には1d10分とする<br>
+            不定の狂気の内容は長期の一時的狂気表を用いる<br>
+            期間は1d6ヵ月とする、〈精神分析〉により1d6時間正気に戻すことが可能、その際のSAN値回復は無し<br>
+            結果によって複数の症状が設定してある場合、PLが選択してよい<br>
+            &emsp;例えば短期の一時的狂気に陥り1d10の結果が6だった場合、殺人癖を発症するか自殺癖を発症するかをPLが決めてよい<br>
+            いずれかの狂気を発症している場合、<strong>あらゆる技能の成功値を半分にする</strong>、しかし〈頭突き〉は元の値で振ってよい<br>
+            また「狂人の洞察力」ルールにより〈目星〉〈聞き耳〉の判定を<strong>100-INT×5</strong>で行ってもよい<br>
+            <h2><span class="material-symbols-outlined">swords</span>戦闘ルール</h2>
+            1ラウンドは12秒とする<br>
+            DEXが同値の者が複数存在する場合、戦闘開始時に1d100を振り出目が低い者から行動する<br>
+            <h3>自ターンに可能な行動</h3>
+            <ul>
+                <li>攻撃</li>
+                <li>逃走、敵全員に対しDEX対抗に成功する必要がある</li>
+                <li>待機、今ラウンドに限り行動順を最後にする</li>
+                <li>回避に専念、回避・受け流しルールを参照</li>
+            </ul>
+            <h3>クリティカル・ファンブルの処理</h3>
+            攻撃時にクリティカルの場合、<strong>基本ダメージ2倍、回避不能、任意のダメージ</strong>から選択<br>
+            マーシャルアーツでクリティカルの場合、<strong>基本ダメージ3倍</strong>(基本ダメージ+マーシャルアーツ+クリティカル)<br>
+            <blockquote>基本ダメージ<br>相手が受けるべきダメージのdbとマーシャルアーツ増加分を除いたダメージ</blockquote>
+            近接攻撃に対する回避時にクリティカルの場合、カウンターを行うこともできる(1d3+dbの装甲無視ダメージ)<br>
+            <blockquote>近接攻撃<br>dbが適用される攻撃</blockquote>
+            攻撃時・マーシャルアーツ・回避時にファンブルの場合、次の自ターンまで自分に対する攻撃が回避不可<br>
+            <h3>回避・受け流しルール</h3>
+            <strong>成功失敗に関わらず回避を行う度に成功率を半分にする</strong>、回避回数は自ターンにリセットされる<br>
+            自ターンに回避に専念する宣言をした場合、そのターン行動できない代わりに初回回避の成功値に+20の補正、ただし上限は80%<br>
+            2回目以降の成功値計算には補正済みの初回回避の成功率を用いる、初回成功率が上限を突破していた場合上限を無視した値を計算に用いる<br>
+            &emsp;例:回避80%の探索者が回避に専念した場合、1回目は80%、2回目は(80+20)/2=50%、3回目は(80+20)/2/2=25%<br>
+            マーシャルアーツによる受け流しは<strong>同ラウンドに1回のみ可</strong>、失敗しても1回とカウントする<br>
+            マーシャルアーツによる受け流しは近接攻撃にのみ可、成功した場合ダメージを受けない<br>
+            他PCやNPCを攻撃から庇う為にはDEX×5のロールに成功する必要がある<br>
+            庇った場合回避することはできないが、<strong>マーシャルアーツの半分</strong>による受け流しは可能<br>
+            <h2><span class="material-symbols-outlined">psychiatry</span>成長ルール</h2>
+            セッション中にクリティカル/ファンブルを出した技能は<strong>その回数分</strong>成長判定を行う<br>
+            技能に失敗した場合1d10の技能成長、<strong>技能成長は各技能につき一度のみ</strong><br>
+            上記に追加でセッション内で成功した技能の内一つに対し成長判定をすることができる<br>
+            技能成長によって技能値が90以上となった場合のSAN値回復は無し<br>
+            <strong>成長判定で1が出た場合</strong>、成長判定を行った技能によってステータスを上昇させてもよい<br>
+            <ul>
+                <li>戦闘技能:STR+1</li>
+                <li>探索技能:CON+1</li>
+                <li>行動技能:DEX+1</li>
+                <li>交渉技能:POW+1</li>
+                <li>知識技能:INT+1またはEDU+1</li>
+            </ul>
+        </div>
+    </div>
+    <div class="forSP">
+        <div class="contents">
+            <h1><i class="material-symbols-outlined">menu_book</i><span>HOUSE RULE</span></h1>
+            <h2><span class="material-symbols-outlined">person</span>キャラシ作成</h2>
+            技能値の上限はどれか一つの技能のみ99%<br>
+            その他の技能は80%まで取得可能<br>
+            例外として回避は80%までのみ取得可能<br>
+            <h2><span class="material-symbols-outlined">swords</span>戦闘ルール</h2>
+            攻撃時にクリティカルの場合<br>
+            &emsp;基本ダメージ2倍か回避不能かつ任意のダメージから選択<br>
+            MAでクリティカルの場合<br>
+            &emsp;基本ダメージ3倍<br>
+            &emsp;(基本ダメージ+MA+クリティカル)<br>
+            <blockquote>基本ダメージ<br>dbを抜いたダメージ</blockquote>
+            近接攻撃に対する回避時にクリティカルの場合<br>
+            &emsp;カウンターを行える<br>&emsp;(1d3+dbの装甲無視ダメージ)<br>
+            <blockquote>近接攻撃<br>dbが適用される攻撃</blockquote>
+            攻撃時・MA・回避時にファンブルの場合<br>
+            &emsp;次の自ターンまで自分に対する攻撃が回避不可<br>
+            <h2><span class="material-symbols-outlined">psychiatry</span>成長ルール</h2>
+            C/Fを出した技能はその回数分成長判定を行う<br>
+            技能に失敗した場合1d10の技能成長<br>技能成長は各技能につき一度のみ<br>
+            上記に追加でセッション内で成功した技能の内一つに対し成長判定をすることができる<br>
+            技能成長によって技能値が90以上となった場合のSAN値回復は無し<br>
+        </div>
+    </div>
+</body>
+
+</html>
