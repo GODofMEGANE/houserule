@@ -1,0 +1,2 @@
+# houserule
+TRPG用のハウスルールです
