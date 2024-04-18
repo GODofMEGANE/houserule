@@ -9,25 +9,9 @@
     --fontsize: 20px;
 }
 
-.forPC {
-    display: block;
-}
-
-.forSP {
-    display: none;
-}
-
 @media only screen and (max-width:767px) {
     :root {
         --fontsize: 12px;
-    }
-
-    .forPC {
-        display: none;
-    }
-
-    .forSP {
-        display: block;
     }
 }
 
